@@ -1,0 +1,26 @@
+{
+  "name": "gamehub",
+  "version": "1.0.0",
+  "description": "2d game platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "ws 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdimon/gamehub.git"
+  },
+  "keywords": [
+    "js",
+    "game"
+  ],
+  "author": "zdimon77@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zdimon/gamehub/issues"
+  },
+  "homepage": "https://github.com/zdimon/gamehub#readme",
+  "dependencies": {
+    "local-web-server": "^1.2.7"
+  }
+}
