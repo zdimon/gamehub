@@ -1,10 +1,10 @@
 #2D game platform.
 
-##Requirements
+##Requirements.
 
     apt-get install npm nodejs-legacy
     
-##Installation
+##Installation.
 
     npm install
     npm test
