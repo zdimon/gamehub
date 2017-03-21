@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/zdimon/gamehub#readme",
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
     "local-web-server": "^1.2.7"
   }
 }
