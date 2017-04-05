@@ -130,3 +130,74 @@ Drawing image.
     sprite.src = 'snowflake.png'
 
     context.drawImage(sprite, 0, 0, sprite.width, sprite.height, myobj.x, myobj.y, sprite.width, sprite.height);
+
+
+Handling a Key-Down Event.
+
+
+    var keyboard = {}
+
+    var handleKeyDown = function handleKeyDown(evt) {
+        keyboard.keyDown = evt.keyCode;
+        console.log(keyboard.keyDown);
+    }
+
+    var handleKeyUp = function handleKeyUp(evt) {
+        keyboard.keyDown = -1;
+        console.log(keyboard.keyDown);
+    }
+
+    document.onkeyup = handleKeyUp;
+    document.onkeydown = handleKeyDown;
+
+
+Create busket.
+
+
+    var basket = new Image();
+    basket.src = 'basket.png'    
+    context.drawImage(basket, 0, 0, basket.width, basket.height, 10, canvas.height-100, sprite.width, sprite.height);
+
+
+Move busket.
+
+
+    var basket_x = 40;
+
+    .....
+
+    if(keyboard.keyDown>0 && keyboard.keyDown == 39) {
+        basket_x = parseInt(basket_x) + 10;
+        
+    }
+
+    if(keyboard.keyDown>0 && keyboard.keyDown == 37) {
+        basket_x = parseInt(basket_x) - 10;
+    }
+
+
+
+
+    context.drawImage(basket, 0, 0, basket.width, basket.height, basket_x, canvas.height-100, sprite.width, sprite.height);
+
+
+Detect caching.
+
+        var score = 0;
+        $('h1').html(score);
+
+        ...
+
+        if (myobj.y>canvas.height) {
+            myobj.y = 0;
+            if(basket_x>(myobj.x-30) && basket_x<(myobj.x+30)){
+                score = score + 1
+                $('h1').html(score);
+            }
+            myobj.x = (Math.random()*100) * (canvas.width/100);
+            
+        }    
+
+
+
+
